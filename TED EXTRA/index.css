@@ -1,0 +1,52 @@
+/*GRUPO:
+  Edson Henrique dos Santos
+  Nayara Freire de Oliveira*/
+
+body {
+  background-color: #000;
+}
+
+.button{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: none;
+    border: none;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%) translateX(calc(99% + 40px));
+    width: 32px;
+    height: 32px;
+    background: #1A73E8;
+    border-radius: 50px;
+    transition: transform .25s .25s cubic-bezier(0, 0, .5, 2),
+    width .25s cubic-bezier(0, 0, .5, 2);
+    z-index: -1;
+}
+
+.button:hover::before {
+    width: 100%;
+    transform: translateY(-50%) translateX(-18px);
+    transition: transform .25s cubic-bezier(0, 0, .5, 2),
+    width .25s .25s cubic-bezier(0, 0, .5, 2);
+}
+
+.button i {
+    margin-left: 14px;
+    transition: transform .25s .4s cubic-bezier(0, 0, .5, 2);
+}
+
+.button:hover i {
+    transform: translateX(2px);
+}
+
+a { 
+    color: white 
+}
